@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Facades\Hash;
@@ -21,9 +20,9 @@ class UserController extends Controller
         'nom' => $data['nom'],
         'prenom' => $data['prenom'],
         'email' => $data['email'],
-         'password' => Hash::make($data['password']),
+        'password' => Hash::make($data['password']),
         'statut' => 0,
-         'role' => 0,
+        'role' => 0,
     ]);
         Session::flash('message', 'vous êtes inscrit(es) avec succes!'); 
         Session::flash('alert-class', 'alert-success text-center'); 
@@ -43,6 +42,7 @@ class UserController extends Controller
         $users= User::latest()->where('id', '!=', 1)
                             ->where('statut', 1)->paginate(5);
         $nombres= User::latest()->where('id', '!=', 1)->where('statut', 0);
+
         return view('admin.user_valid', compact('users', 'nombres'));
     }
 
@@ -53,7 +53,7 @@ class UserController extends Controller
         return view('admin.user_invalid', compact('users'));
     }
 
-// Validation et rejet des inscriptions
+    //Validation et rejet des inscriptions
 
     public function validate_inscrit($id)
     {

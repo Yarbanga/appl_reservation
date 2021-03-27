@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
-
+//nous permet de creer des enregist en quantité et d'etabli facilement divers relation en notre tabble
 $factory->define(User::class, function (Faker $faker) {
     return [
         'nom' => $faker->name,

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDateReservsTable extends Migration
+class CreateDateReservatnsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateDateReservsTable extends Migration
      */
     public function up()
     {
-        Schema::create('date_reservs', function (Blueprint $table) {
+        Schema::create('date_reservatns', function (Blueprint $table) {
             $table->id();
+            $table->string('date');
+            $table->string('heure');
+            $table->string('localisation');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateDateReservsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('date_reservs');
+        Schema::dropIfExists('date_reservatns');
     }
 }

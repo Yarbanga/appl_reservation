@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap');
+
+body {
+    
+    font-family: 'Hind', sans-serif
+}
+
+.card {
+    width: 125%;
+    height: 50%;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10%
+}
+
+.fas {
+    color: #686DA4
+}
+
+.date {
+    border: 1px solid #F4F4F4;
+    height: 40px
+}
+
+.btn-primary {
+    background: #5765C6;
+    border: none;
+    border-radius: 5px;
+       padding: 12px
+}
+
+.btn-primary:hover {
+    background: #5765C6
+}
+
+.btn-primary:focus {
+    box-shadow: none
+}
+
+.btn-primary span {
+    font-size: 15px
+}

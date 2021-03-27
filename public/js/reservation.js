@@ -1,8 +1,8 @@
-$(document).ready(function(){
-
-$('input').on('click', function() {
-
-  onclick="javascript:document.getElementById('formulaire').style.visibility='visible';"
-
-});
-});
+let heures=document.querySelectorAll('.cell');
+let value;
+heures.forEach(heure =>{
+	heure.addEventListener("click",function(e){
+        console.log(this);
+	})
+})
+console.log('hello word!');
